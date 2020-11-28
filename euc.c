@@ -6,6 +6,8 @@
 /* 
 euclidean algorithm: given integers a and b, 
 find their greatest common divisor
+
+Prints intermediate steps
  */
 
 int main(int argc, char *argv[])
@@ -15,8 +17,6 @@ int main(int argc, char *argv[])
     return 0;
   }
 
-  printf("%d\n", atoi(argv[1]));
-  printf("%d\n", atoi(argv[2]));
   int a = atoi(argv[1]);
   int b = atoi(argv[2]);
   int r0 = a > b ? a : b;
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     q = r0 / r1;
   } while (r2 != 0);
 
-  printf("%d %d %d\n", r2, r1, r0);
+  printf("%d\n",r1);
 
   return 0;
 }
