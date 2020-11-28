@@ -10,6 +10,11 @@ find their greatest common divisor
 
 int main(int argc, char *argv[])
 {
+  if (argc < 3) {
+    printf("usage: euc a b\n");
+    return 0;
+  }
+
   printf("%d\n", atoi(argv[1]));
   printf("%d\n", atoi(argv[2]));
   int a = atoi(argv[1]);
@@ -29,4 +34,6 @@ int main(int argc, char *argv[])
   } while (r2 != 0);
 
   printf("%d %d %d\n", r2, r1, r0);
+
+  return 0;
 }
